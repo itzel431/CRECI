@@ -7,7 +7,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="root"></div>
+    <!-- Pantalla de Inicio -->
+    <div id="home-screen" class="screen">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <button class="start-button" onclick="goToSecondScreen()">Empezar →</button>
+    </div>
+
+    <!-- Pantalla de Funciones -->
+    <div id="second-screen" class="screen hidden">
+        <header>
+            <h1>Creci</h1>
+            <p>Acompañándote en el arte de ser mamá</p>
+        </header>
+        <div class="options">
+            <button onclick="openMoments()">Momentos</button>
+            <button onclick="openHealth()">Salud</button>
+            <button onclick="openLactation()">Lactancia</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Momentos -->
+    <div id="moments-screen" class="screen hidden">
+        <header>
+            <h1>Momentos</h1>
+            <button onclick="takePhoto()">Tomar Foto</button>
+            <input type="file" id="photo-input" accept="image/*" onchange="uploadPhoto()" class="hidden">
+            <button onclick="goBack()">Volver</button>
+        </header>
+        <div id="album"></div>
+    </div>
+
+    <!-- Pantalla de Salud -->
+    <div id="health-screen" class="screen hidden">
+        <header>
+            <h1>Salud</h1>
+            <form id="health-form">
+                <label for="allergies">Alergias:</label>
+                <input type="text" id="allergies" name="allergies">
+                <label for="vaccines">Vacunas:</label>
+                <input type="text" id="vaccines" name="vaccines">
+                <button type="submit">Guardar Datos</button>
+            </form>
+            <button onclick="goBack()">Volver</button>
+        </header>
+    </div>
+
+    <!-- Pantalla de Lactancia -->
+    <div id="lactation-screen" class="screen hidden">
+        <header>
+            <h1>Lactancia</h1>
+            <button onclick="startStopTimer()">Iniciar/Detener Cronómetro</button>
+            <p id="timer">00:00</p>
+            <button onclick="goBack()">Volver</button>
+        </header>
+    </div>
+
     <script src="js.js"></script>
 </body>
 </html>

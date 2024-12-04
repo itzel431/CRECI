@@ -1,45 +1,71 @@
-// Función para iniciar el cronómetro
-let timer;
-let isRunning = false;
-let time = 0;
+let timerInterval;
+let seconds = 0;
+let minutes = 0;
+let timerRunning = false;
 
-function startTimer() {
-    if (!isRunning) {
-        isRunning = true;
-        timer = setInterval(() => {
-            time++;
-            document.getElementById('timer').innerText = formatTime(time);
-        }, 1000);
-    }
+function goToSecondScreen() {
+    document.getElementById('home-screen').classList.add('hidden');
+    document.getElementById('second-screen').classList.remove('hidden');
 }
 
-function stopTimer() {
-    clearInterval(timer);
-    isRunning = false;
+function openMoments() {
+    document.getElementById('second-screen').classList.add('hidden');
+    document.getElementById('moments-screen').classList.remove('hidden');
 }
 
-function resetTimer() {
-    clearInterval(timer);
-    time = 0;
-    document.getElementById('timer').innerText = '00:00';
+function openHealth() {
+    document.getElementById('second-screen').classList.add('hidden');
+    document.getElementById('health-screen').classList.remove('hidden');
 }
 
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const sec = seconds % 60;
-    return `${minutes < 10 ? '0' : ''}${minutes}:${sec < 10 ? '0' : ''}${sec}`;
+function openLactation() {
+    document.getElementById('second-screen').classList.add('hidden');
+    document.getElementById('lactation-screen').classList.remove('hidden');
 }
 
-// Lógica para seleccionar una imagen
-function handleImageSelect(event) {
-    const file = event.target.files[0];
+function goBack() {
+    const screens = document.querySelectorAll('.screen');
+    screens.forEach(screen => screen.classList.add('hidden'));
+    document.getElementById('second-screen').classList.remove('hidden');
+}
+
+function takePhoto() {
+    document.getElementById('photo-input').click();
+}
+
+function uploadPhoto() {
+    const photoInput = document.getElementById('photo-input');
+    const file = photoInput.files[0];
+
     if (file) {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            const image = new Image();
-            image.src = reader.result;
-            document.getElementById('selectedImage').appendChild(image);
-        };
-        reader.readAsDataURL(file);
+        const album = document.getElementById('album');
+        const image = document.createElement('img');
+        image.src = URL.createObjectURL(file);
+        album.appendChild(image);
     }
+}
+
+function startStopTimer() {
+    if (!timerRunning) {
+        timerRunning = true;
+        timerInterval = setInterval(updateTimer, 1000);
+    } else {
+        timerRunning = false;
+        clearInterval(timerInterval);
+    }
+}
+
+function updateTimer() {
+    seconds++;
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    const timerDisplay = document.getElementById('timer');
+    timerDisplay.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
+}
+
+function formatTime(time) {
+    return time < 10 ? '0' + time : time;
 }
