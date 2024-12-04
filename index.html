@@ -3,57 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creci - App para Mamás</title>
+    <title>Creci - Acompañándote en el arte de ser mamá</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
     <!-- Pantalla de Inicio -->
     <div id="home-screen" class="screen">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <button class="start-button" onclick="goToSecondScreen()">Empezar →</button>
+        <div class="content">
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <button class="start-button" onclick="goToSecondScreen()">Empezar →</button>
+        </div>
     </div>
 
-    <!-- Pantalla con las funcionalidades -->
+    <!-- Pantalla de Funciones -->
     <div id="second-screen" class="screen hidden">
         <header>
             <h1>Creci</h1>
             <p>Acompañándote en el arte de ser mamá</p>
         </header>
-        <div class="options">
-            <button onclick="goToMomentsScreen()">Momentos</button>
-            <button onclick="goToHealthScreen()">Salud</button>
-            <button onclick="goToLactationScreen()">Lactancia</button>
+        <div class="sections">
+            <div class="section">
+                <img src="assets/moments-icon.png" alt="Momentos" class="icon">
+                <button onclick="goToMoments()">Momentos</button>
+            </div>
+            <div class="section">
+                <img src="assets/health-icon.png" alt="Salud" class="icon">
+                <button onclick="goToHealth()">Salud</button>
+            </div>
+            <div class="section">
+                <img src="assets/lactation-icon.png" alt="Lactancia" class="icon">
+                <button onclick="goToLactation()">Lactancia</button>
+            </div>
+            <div class="section">
+                <img src="assets/growth-icon.png" alt="Crecimiento" class="icon">
+                <button onclick="goToGrowth()">Crecimiento</button>
+            </div>
+            <div class="section">
+                <img src="assets/whatsapp-icon.png" alt="WhatsApp" class="icon">
+                <button onclick="goToWhatsApp()">WhatsApp</button>
+            </div>
         </div>
-    </div>
-
-    <!-- Pantalla de Momentos (Subir fotos) -->
-    <div id="moments-screen" class="screen hidden">
-        <h2>Momentos</h2>
-        <button onclick="selectPhoto()">Seleccionar Foto</button>
-        <button onclick="takePhoto()">Tomar Foto</button>
-        <div id="photo-gallery"></div>
-        <button onclick="goBack()">Volver</button>
-    </div>
-
-    <!-- Pantalla de Salud -->
-    <div id="health-screen" class="screen hidden">
-        <h2>Salud</h2>
-        <form id="health-form">
-            <input type="text" placeholder="Alergias" id="allergies" required>
-            <input type="text" placeholder="Tipo de Leche" id="milk-type" required>
-            <input type="text" placeholder="Vacunas" id="vaccines" required>
-            <button type="submit">Guardar Datos</button>
-        </form>
-        <button onclick="goBack()">Volver</button>
-    </div>
-
-    <!-- Pantalla de Lactancia -->
-    <div id="lactation-screen" class="screen hidden">
-        <h2>Lactancia</h2>
-        <button onclick="startTimer()">Iniciar Cronómetro</button>
-        <button onclick="stopTimer()">Detener Cronómetro</button>
-        <p id="timer">0:00</p>
-        <button onclick="goBack()">Volver</button>
     </div>
 
     <script src="js.js"></script>
