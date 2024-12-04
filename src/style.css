@@ -1,0 +1,82 @@
+/* Resetear margenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fondo de pantalla */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Contenedor general de la pantalla */
+  .screen {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Logo de la app */
+  .logo-container {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+  
+  /* Botón para empezar */
+  .start-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .start-btn:hover {
+    background-color: #ff3385;
+  }
+  
+  .arrow {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para los botones de la segunda pantalla */
+  .sections button {
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 80%;
+  }
+  
+  .sections button:hover {
+    background-color: #ff3385;
+  }
+  
+  /* Sección de contenido */
+  .section-content {
+    display: none;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    color: #ff66b2;
+  }
+  
