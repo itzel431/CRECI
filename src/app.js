@@ -1,16 +1,10 @@
-// Muestra la pantalla principal al presionar el botón "Comenzar"
-document.getElementById('startButton').addEventListener('click', function() {
-  document.getElementById('homeScreen').style.display = 'none';
-  document.getElementById('mainScreen').style.display = 'block';
+// Seleccionamos los elementos del DOM
+const startButton = document.getElementById("startButton");
+const homeScreen = document.getElementById("homeScreen");
+const mainScreen = document.getElementById("mainScreen");
+
+// Al hacer clic en el botón "Comenzar", cambiamos de pantalla
+startButton.addEventListener("click", () => {
+  homeScreen.style.display = "none"; // Ocultamos la pantalla de inicio
+  mainScreen.style.display = "flex"; // Mostramos la pantalla principal
 });
-
-// Función para mostrar las secciones (Salud, Momentos, etc.)
-function showSection(sectionName) {
-  const sections = document.querySelectorAll('.section');
-  sections.forEach((section) => {
-    section.classList.remove('active');
-  });
-  document.getElementById(sectionName).classList.add('active');
-}
-
-  

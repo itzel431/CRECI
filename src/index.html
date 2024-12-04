@@ -4,58 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creci App</title>
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="src/style.css"> <!-- Enlazamos el archivo CSS -->
 </head>
 <body>
   <!-- Pantalla inicial -->
   <div id="homeScreen" class="screen">
     <div class="logo-container">
-      <img src="assets/logo.png" alt="Logo de Creci" class="logo">
+      <img src="assets/logo.png" alt="Logo de Creci" class="logo"> <!-- Logo de la app -->
     </div>
-    <button id="startButton" class="start-btn">
-      <span class="arrow">➡️</span> Comenzar
-    </button>
-  </div>
-
-  <!-- Pantalla principal (oculta inicialmente) -->
-  <div id="mainScreen" class="screen">
-    <header>
-      <h1>Creci</h1>
-      <p>Acompañándote en el arte de ser mamá</p>
-    </header>
-
-    <div class="sections">
-      <button onclick="showSection('health')">Salud</button>
-      <button onclick="showSection('moments')">Momentos</button>
-      <button onclick="showSection('growth')">Crecimiento</button>
-      <button onclick="showSection('diary')">Diario</button>
-    </div>
-
-    <!-- Sección Salud -->
-    <div id="health" class="section">
-      <h2>Salud</h2>
-      <p>Funcionalidad de salud aquí...</p>
-    </div>
-
-    <!-- Sección Momentos -->
-    <div id="moments" class="section">
-      <h2>Momentos</h2>
-      <p>Funcionalidad de momentos aquí...</p>
-    </div>
-
-    <!-- Sección Crecimiento -->
-    <div id="growth" class="section">
-      <h2>Crecimiento</h2>
-      <p>Funcionalidad de crecimiento aquí...</p>
-    </div>
-
-    <!-- Sección Diario -->
-    <div id="diary" class="section">
-      <h2>Diario</h2>
-      <p>Funcionalidad de diario aquí...</p>
+    <div class="button-container">
+      <button id="startButton" class="start-button">Comenzar</button> <!-- Botón de inicio -->
     </div>
   </div>
 
-  <script src="src/app.js"></script>
+  <!-- Pantalla principal después de presionar el botón -->
+  <div id="mainScreen" class="screen" style="display: none;">
+    <h1>Creci App</h1>
+    <h2>Acompañándote en el arte de ser mamá</h2>
+    <div class="menu">
+      <div class="menu-item">Salud</div>
+      <div class="menu-item">Momentos</div>
+      <div class="menu-item">Crecimiento</div>
+      <div class="menu-item">WhatsApp</div>
+    </div>
+  </div>
+
+  <script src="src/app.js"></script> <!-- Enlazamos el archivo JS -->
 </body>
 </html>
