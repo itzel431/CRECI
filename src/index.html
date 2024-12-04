@@ -4,31 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creci App</title>
-  <link rel="stylesheet" href="src/style.css"> <!-- Enlazamos el archivo CSS -->
+  <link rel="stylesheet" href="src/style.css"> <!-- Enlace al archivo de estilo -->
 </head>
 <body>
   <!-- Pantalla inicial -->
   <div id="homeScreen" class="screen">
     <div class="logo-container">
-      <img src="assets/logo.png" alt="Logo de Creci" class="logo"> <!-- Logo de la app -->
+      <img src="assets/logo.png" alt="Logo de Creci" class="logo">
     </div>
     <div class="button-container">
       <button id="startButton" class="start-button">Comenzar</button> <!-- Botón de inicio -->
     </div>
   </div>
 
-  <!-- Pantalla principal después de presionar el botón -->
+  <!-- Pantalla principal -->
   <div id="mainScreen" class="screen" style="display: none;">
     <h1>Creci App</h1>
     <h2>Acompañándote en el arte de ser mamá</h2>
-    <div class="menu">
-      <div class="menu-item">Salud</div>
-      <div class="menu-item">Momentos</div>
-      <div class="menu-item">Crecimiento</div>
-      <div class="menu-item">WhatsApp</div>
+    
+    <div id="features">
+      <button class="feature-button">Salud</button>
+      <button class="feature-button">Momentos</button>
+      <button class="feature-button">Crecimiento</button>
+      <button class="feature-button">WhatsApp</button>
     </div>
   </div>
 
-  <script src="src/app.js"></script> <!-- Enlazamos el archivo JS -->
+  <script src="src/app.js"></script> <!-- Enlazamos el archivo JavaScript -->
 </body>
 </html>

@@ -1,10 +1,10 @@
-// Seleccionamos los elementos del DOM
-const startButton = document.getElementById("startButton");
-const homeScreen = document.getElementById("homeScreen");
-const mainScreen = document.getElementById("mainScreen");
+// Obtén los elementos
+const startButton = document.getElementById('startButton');
+const homeScreen = document.getElementById('homeScreen');
+const mainScreen = document.getElementById('mainScreen');
 
-// Al hacer clic en el botón "Comenzar", cambiamos de pantalla
-startButton.addEventListener("click", () => {
-  homeScreen.style.display = "none"; // Ocultamos la pantalla de inicio
-  mainScreen.style.display = "flex"; // Mostramos la pantalla principal
+// Función para cambiar a la pantalla principal
+startButton.addEventListener('click', () => {
+  homeScreen.style.display = 'none'; // Ocultar la pantalla inicial
+  mainScreen.style.display = 'block'; // Mostrar la pantalla principal
 });

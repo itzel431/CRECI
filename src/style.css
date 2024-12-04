@@ -1,21 +1,25 @@
-/* Estilo general para el cuerpo */
+/* Estilo general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* Pantalla inicial */
 .screen {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
+/* Estilo del logo */
 .logo-container {
   margin-bottom: 20px;
 }
@@ -25,61 +29,42 @@ body {
   height: auto;
 }
 
+/* Estilo del botón */
 .button-container {
   margin-top: 20px;
 }
 
 .start-button {
-  background-color: #ff4081; /* Color rosa */
-  color: white;
-  border: none;
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-size: 18px;
+  background-color: #FF4C8B; /* Rosa */
+  border: none;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .start-button:hover {
-  background-color: #e91e63;
+  background-color: #FF0066;
 }
 
 /* Pantalla principal */
 #mainScreen {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-#mainScreen h1 {
-  color: #ff4081;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-#mainScreen h2 {
-  color: #333;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.menu-item {
-  background-color: #ff4081;
+.feature-button {
+  margin: 10px;
+  padding: 15px 25px;
+  background-color: #5C5CFF;
   color: white;
-  padding: 20px 40px;
-  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
 }
 
-.menu-item:hover {
-  background-color: #e91e63;
+.feature-button:hover {
+  background-color: #3B3BFF;
 }
