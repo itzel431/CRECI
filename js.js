@@ -1,31 +1,36 @@
-// Función para mostrar la pantalla principal con los apartados
+// Función para ir a la pantalla principal
 function goToSecondScreen() {
     document.getElementById('home-screen').classList.add('hidden');
     document.getElementById('second-screen').classList.remove('hidden');
 }
 
-// Funciones de los apartados
+// Funciones para los apartados
+function goToDiary() {
+    alert('Vas a Diario!');
+    // Lógica para mostrar el Diario
+}
+
 function goToMoments() {
-    alert('Ir a Momentos');
-    // Aquí podrías redirigir a la página o pantalla de "Momentos"
+    alert('Vas a Momentos!');
+    // Lógica para tomar fotos, guardar descripción, etc.
 }
 
 function goToHealth() {
-    alert('Ir a Salud');
-    // Aquí podrías redirigir a la página o pantalla de "Salud"
+    alert('Vas a Salud!');
+    // Lógica para registrar datos de salud
 }
 
 function goToLactation() {
-    alert('Ir a Lactancia');
-    // Aquí podrías redirigir a la página o pantalla de "Lactancia"
+    alert('Vas a Lactancia!');
+    // Lógica para iniciar el cronómetro de lactancia
 }
 
 function goToGrowth() {
-    alert('Ir a Crecimiento');
-    // Aquí podrías redirigir a la página o pantalla de "Crecimiento"
+    alert('Vas a Crecimiento!');
+    // Lógica para el seguimiento del crecimiento del bebé
 }
 
 function goToWhatsApp() {
-    alert('Ir a WhatsApp');
-    // Aquí podrías redirigir a la página o pantalla de "WhatsApp"
+    alert('Vas a WhatsApp!');
+    // Lógica para abrir WhatsApp o agregar alguna funcionalidad
 }

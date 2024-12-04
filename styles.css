@@ -1,123 +1,150 @@
-/* Estilo global */
+/* Estilo Global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Fondo general */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f7f0; /* Fondo suave y cálido */
-    color: #333;
+    background-color: #F7F1F6; /* Color cálido y suave */
+    color: #4A4A4A;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    flex-direction: column;
 }
 
-.screen {
+/* Pantalla de Inicio */
+#home-screen {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: opacity 0.5s ease;
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Pantalla de inicio */
-#home-screen {
-    background-color: #ffebf2; /* Fondo rosado cálido */
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
 }
 
-.logo {
+#home-screen .logo {
     width: 150px;
     margin-bottom: 20px;
 }
 
 .start-button {
-    padding: 15px 30px;
-    background-color: #ff66b2;
-    border: none;
+    background-color: #FF8C8C; /* Rosa cálido */
     color: white;
+    border: none;
+    padding: 15px 30px;
     font-size: 18px;
+    border-radius: 30px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .start-button:hover {
-    background-color: #ff3385;
+    background-color: #FF4C4C;
 }
 
-/* Pantalla de apartados */
+/* Pantalla de Funciones */
 #second-screen {
-    background-color: #fff1e6;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 10px;
+    text-align: center;
 }
 
 header {
     margin-bottom: 30px;
 }
 
-h1 {
+header h1 {
     font-size: 36px;
-    color: #ff66b2;
-    margin-bottom: 10px;
+    color: #F16262; /* Rosa claro */
 }
 
-p {
+header p {
     font-size: 18px;
-    color: #ff3385;
+    margin-bottom: 20px;
+    color: #6F6F6F;
 }
 
-/* Estilo de los botones de los apartados */
 .sections {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .section {
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #FFB6B6; /* Fondo suave */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 120px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .section:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
-.icon {
-    width: 50px;
-    margin-bottom: 15px;
+.section-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #ff66b2;
-    border: none;
+    background-color: #FF8C8C;
     color: white;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #ff3385;
+    background-color: #FF4C4C;
+}
+
+/* Pantallas secundarias (Momento, Salud, Lactancia) */
+.screen {
+    display: none;
+    padding: 20px;
+}
+
+.screen h2 {
+    color: #F16262;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Formulario de salud */
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+/* Estilo del álbum de fotos */
+#photo-album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#photo-album img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
