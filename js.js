@@ -1,71 +1,83 @@
-let timerInterval;
-let seconds = 0;
-let minutes = 0;
-let timerRunning = false;
-
+// Funciones de navegación
 function goToSecondScreen() {
     document.getElementById('home-screen').classList.add('hidden');
     document.getElementById('second-screen').classList.remove('hidden');
 }
 
-function openMoments() {
+function goToMomentsScreen() {
     document.getElementById('second-screen').classList.add('hidden');
     document.getElementById('moments-screen').classList.remove('hidden');
 }
 
-function openHealth() {
+function goToHealthScreen() {
     document.getElementById('second-screen').classList.add('hidden');
     document.getElementById('health-screen').classList.remove('hidden');
 }
 
-function openLactation() {
+function goToLactationScreen() {
     document.getElementById('second-screen').classList.add('hidden');
     document.getElementById('lactation-screen').classList.remove('hidden');
 }
 
 function goBack() {
-    const screens = document.querySelectorAll('.screen');
-    screens.forEach(screen => screen.classList.add('hidden'));
+    document.querySelectorAll('.screen').forEach(screen => screen.classList.add('hidden'));
     document.getElementById('second-screen').classList.remove('hidden');
 }
 
+// Funcionalidad de Momentos (guardar fotos)
+let photoGallery = [];
+
+function selectPhoto() {
+    alert('Seleccionar Foto (en esta demo no es funcional)');
+}
+
 function takePhoto() {
-    document.getElementById('photo-input').click();
+    alert('Tomar Foto (en esta demo no es funcional)');
 }
 
-function uploadPhoto() {
-    const photoInput = document.getElementById('photo-input');
-    const file = photoInput.files[0];
-
-    if (file) {
-        const album = document.getElementById('album');
-        const image = document.createElement('img');
-        image.src = URL.createObjectURL(file);
-        album.appendChild(image);
-    }
+function addPhotoToGallery(photo, description) {
+    photoGallery.push({ photo, description, date: new Date().toLocaleString() });
+    displayGallery();
 }
 
-function startStopTimer() {
-    if (!timerRunning) {
-        timerRunning = true;
-        timerInterval = setInterval(updateTimer, 1000);
-    } else {
-        timerRunning = false;
-        clearInterval(timerInterval);
-    }
+function displayGallery() {
+    const gallery = document.getElementById('photo-gallery');
+    gallery.innerHTML = photoGallery.map(photo => `
+        <div class="photo-item">
+            <img src="${photo.photo}" alt="Foto" width="100">
+            <p>${photo.description}</p>
+            <p>${photo.date}</p>
+        </div>
+    `).join('');
 }
 
-function updateTimer() {
-    seconds++;
-    if (seconds == 60) {
-        seconds = 0;
-        minutes++;
-    }
+// Funcionalidad de Salud (guardar datos)
+document.getElementById('health-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const allergies = document.getElementById('allergies').value;
+    const milkType = document.getElementById('milk-type').value;
+    const vaccines = document.getElementById('vaccines').value;
 
-    const timerDisplay = document.getElementById('timer');
-    timerDisplay.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
+    alert(`Datos guardados: Alergias: ${allergies}, Leche: ${milkType}, Vacunas: ${vaccines}`);
+});
+
+// Funcionalidad de Lactancia (cronómetro)
+let timerInterval;
+let timerSeconds = 0;
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timerSeconds++;
+        document.getElementById('timer').textContent = formatTime(timerSeconds);
+    }, 1000);
 }
 
-function formatTime(time) {
-    return time < 10 ? '0' + time : time;
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 }

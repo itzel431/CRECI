@@ -1,86 +1,78 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
-h1 {
-    font-size: 2em;
-    color: #333;
-}
-
-button {
-    background-color: #f35f5f;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #f14f4f;
-}
-
-/* Pantallas */
 .screen {
     display: none;
+    text-align: center;
 }
 
 .screen.active {
     display: block;
 }
 
-#home-screen {
-    background-color: #f8b7d1; /* Fondo rosita */
-    padding: 20px;
-}
-
 .logo {
-    width: 100px;
+    width: 150px;
     margin-bottom: 20px;
 }
 
-.start-button {
+.start-button, .options button, #moments-screen button, #health-screen button, #lactation-screen button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
     font-size: 18px;
 }
 
-/* Estilos del album en Momentos */
-#album {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.start-button:hover, .options button:hover, #moments-screen button:hover, #health-screen button:hover, #lactation-screen button:hover {
+    background-color: #e30058;
 }
 
-#album img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 5px;
+button:focus {
+    outline: none;
 }
 
-/* Formulario de Salud */
-form {
-    text-align: left;
-    margin: 20px 0;
-}
-
-label {
-    display: block;
-    margin: 5px 0;
-}
-
-input {
-    padding: 8px;
-    width: 200px;
-    margin-bottom: 10px;
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4081;
 }
 
 .hidden {
     display: none;
+}
+
+form input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 250px;
+}
+
+form button {
+    background-color: #ff4081;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e30058;
 }
