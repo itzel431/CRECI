@@ -1,16 +1,22 @@
 {
-    "name": "creciapp",
-    "version": "1.0.0",
-    "main": "index.html",
-    "scripts": {
-      "start": "serve ."
-    },
-    "dependencies": {},
-    "devDependencies": {
-      "serve": "^14.0.1"
-    },
-    "description": "Aplicación Creci: Acompañándote en el arte de ser mamá",
-    "author": "Tu nombre",
-    "license": "MIT"
-  }
-  
+  "name": "creci-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "build": "expo build:web"
+  },
+  "dependencies": {
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-scripts": "4.0.3",
+    "expo": "^48.0.0",
+    "react-navigation": "^5.0.0",
+    "react-navigation-stack": "^2.10.4",
+    "react-native-gesture-handler": "^2.4.0",
+    "react-native-reanimated": "^2.6.0",
+    "react-native-safe-area-context": "^3.3.2"
+  },
+  "devDependencies": {},
+  "private": true
+}
