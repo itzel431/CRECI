@@ -1,36 +1,30 @@
-// Función para ir a la pantalla principal
 function goToSecondScreen() {
-    document.getElementById('home-screen').classList.add('hidden');
-    document.getElementById('second-screen').classList.remove('hidden');
+    document.getElementById("home-screen").classList.add("hidden");
+    document.getElementById("second-screen").classList.remove("hidden");
 }
 
-// Funciones para los apartados
+// Funcionalidades de los apartados
 function goToDiary() {
-    alert('Vas a Diario!');
-    // Lógica para mostrar el Diario
+    alert("Aquí podrás registrar tu diario.");
 }
 
 function goToMoments() {
-    alert('Vas a Momentos!');
-    // Lógica para tomar fotos, guardar descripción, etc.
+    alert("¡Toma una foto o selecciona una imagen para tus momentos!");
+    // Aquí agregaríamos la funcionalidad de tomar foto o elegir una imagen del dispositivo
 }
 
 function goToHealth() {
-    alert('Vas a Salud!');
-    // Lógica para registrar datos de salud
+    alert("Registra información sobre la salud de tu bebé.");
 }
 
 function goToLactation() {
-    alert('Vas a Lactancia!');
-    // Lógica para iniciar el cronómetro de lactancia
+    alert("Aquí puedes controlar el tiempo de lactancia con un cronómetro.");
 }
 
 function goToGrowth() {
-    alert('Vas a Crecimiento!');
-    // Lógica para el seguimiento del crecimiento del bebé
+    alert("Registra el crecimiento de tu bebé.");
 }
 
 function goToWhatsApp() {
-    alert('Vas a WhatsApp!');
-    // Lógica para abrir WhatsApp o agregar alguna funcionalidad
+    alert("Accede a la funcionalidad de WhatsApp.");
 }

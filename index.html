@@ -23,56 +23,31 @@
             <p>Acompañándote en el arte de ser mamá</p>
         </header>
         <div class="sections">
+            <div class="section" onclick="goToDiary()">
+                <img src="assets/diary-icon.png" alt="Diario" class="icon">
+                <span>Diario</span>
+            </div>
             <div class="section" onclick="goToMoments()">
-                <img src="assets/moments-icon.png" alt="Momentos" class="section-icon">
+                <img src="assets/moments-icon.png" alt="Momentos" class="icon">
                 <span>Momentos</span>
             </div>
             <div class="section" onclick="goToHealth()">
-                <img src="assets/health-icon.png" alt="Salud" class="section-icon">
+                <img src="assets/health-icon.png" alt="Salud" class="icon">
                 <span>Salud</span>
             </div>
             <div class="section" onclick="goToLactation()">
-                <img src="assets/lactation-icon.png" alt="Lactancia" class="section-icon">
+                <img src="assets/lactation-icon.png" alt="Lactancia" class="icon">
                 <span>Lactancia</span>
             </div>
             <div class="section" onclick="goToGrowth()">
-                <img src="assets/growth-icon.png" alt="Crecimiento" class="section-icon">
+                <img src="assets/growth-icon.png" alt="Crecimiento" class="icon">
                 <span>Crecimiento</span>
             </div>
             <div class="section" onclick="goToWhatsApp()">
-                <img src="assets/whatsapp-icon.png" alt="WhatsApp" class="section-icon">
+                <img src="assets/whatsapp-icon.png" alt="WhatsApp" class="icon">
                 <span>WhatsApp</span>
             </div>
         </div>
-    </div>
-
-    <!-- Pantalla de Momentos -->
-    <div id="moments-screen" class="screen hidden">
-        <h2>Momentos</h2>
-        <input type="file" id="photo-input" accept="image/*" onchange="addPhoto()">
-        <input type="text" id="photo-description" placeholder="Descripción de la foto">
-        <button onclick="savePhoto()">Guardar Foto</button>
-        <div id="photo-album">
-            <h3>Álbum de Fotos</h3>
-            <!-- Aquí se agregarán las fotos -->
-        </div>
-        <button onclick="goBack()">Volver</button>
-    </div>
-
-    <!-- Pantalla de Salud -->
-    <div id="health-screen" class="screen hidden">
-        <h2>Salud</h2>
-        <form id="health-form">
-            <input type="text" placeholder="Alergias" id="allergies">
-            <input type="text" placeholder="Tipo de Pañales" id="diapers">
-            <input type="text" placeholder="Tipo de Leche" id="milk">
-            <input type="text" placeholder="Vacunas" id="vaccines">
-            <input type="text" placeholder="Recomendaciones del Pediatra" id="doctor-recommendations">
-            <input type="text" placeholder="Próximas Citas" id="appointments">
-            <input type="text" placeholder="Tipo de Piel" id="skin-type">
-            <button type="submit">Guardar Información</button>
-        </form>
-        <button onclick="goBack()">Volver</button>
     </div>
 
     <script src="js.js"></script>
