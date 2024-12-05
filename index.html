@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
+
     <!-- Pantalla de Inicio -->
     <div id="home-screen" class="screen">
         <div class="content">
@@ -23,31 +24,54 @@
             <p>Acompañándote en el arte de ser mamá</p>
         </header>
         <div class="sections">
-            <div class="section" onclick="goToDiary()">
-                <img src="assets/diary-icon.png" alt="Diario" class="icon">
-                <span>Diario</span>
-            </div>
             <div class="section" onclick="goToMoments()">
                 <img src="assets/moments-icon.png" alt="Momentos" class="icon">
-                <span>Momentos</span>
+                <p>Momentos</p>
             </div>
             <div class="section" onclick="goToHealth()">
                 <img src="assets/health-icon.png" alt="Salud" class="icon">
-                <span>Salud</span>
+                <p>Salud</p>
             </div>
             <div class="section" onclick="goToLactation()">
                 <img src="assets/lactation-icon.png" alt="Lactancia" class="icon">
-                <span>Lactancia</span>
+                <p>Lactancia</p>
             </div>
             <div class="section" onclick="goToGrowth()">
                 <img src="assets/growth-icon.png" alt="Crecimiento" class="icon">
-                <span>Crecimiento</span>
+                <p>Crecimiento</p>
             </div>
             <div class="section" onclick="goToWhatsApp()">
                 <img src="assets/whatsapp-icon.png" alt="WhatsApp" class="icon">
-                <span>WhatsApp</span>
+                <p>WhatsApp</p>
             </div>
         </div>
+    </div>
+
+    <!-- Funcionalidades: Momentos -->
+    <div id="moments-screen" class="screen hidden">
+        <header>
+            <h1>Momentos</h1>
+        </header>
+        <input type="file" id="photo-input" accept="image/*" onchange="handlePhoto()">
+        <textarea id="photo-description" placeholder="Añade una descripción..."></textarea>
+        <button onclick="saveMoment()">Guardar Foto</button>
+        <div id="moments-gallery" class="gallery"></div>
+    </div>
+
+    <!-- Funcionalidades: Salud -->
+    <div id="health-screen" class="screen hidden">
+        <header>
+            <h1>Salud</h1>
+        </header>
+        <form id="health-form">
+            <label for="allergies">Alergias:</label>
+            <input type="text" id="allergies" placeholder="Ej. Ninguna">
+            <label for="pediatrician">Pediatra:</label>
+            <input type="text" id="pediatrician" placeholder="Nombre del pediatra">
+            <label for="vaccines">Vacunas:</label>
+            <input type="text" id="vaccines" placeholder="Vacunas recibidas">
+            <button type="button" onclick="saveHealthData()">Guardar Datos</button>
+        </form>
     </div>
 
     <script src="js.js"></script>
