@@ -1,17 +1,18 @@
-// Función para cambiar de pantalla: de inicio a la pantalla principal
+// Función para cambiar a la pantalla principal
 function goToSecondScreen() {
     document.getElementById("home-screen").classList.add("hidden");
     document.getElementById("second-screen").classList.remove("hidden");
 }
 
-// Función para cada apartado
-function goToMoments() {
-    alert("Funcionalidad de Momentos: Toma o selecciona una foto, añade descripción y guarda.");
-    // Aquí puedes abrir una nueva ventana o lógica para tomar una foto
+// Función para Momentos: abrir el álbum y tomar o seleccionar fotos
+function goToMomentos() {
+    alert("Funcionalidad de Momentos: Selecciona una foto o toma una foto, agrega una descripción y guárdala.");
+    // Aquí se puede integrar un servicio de API para tomar una foto
 }
 
-function goToHealth() {
-    let healthData = prompt("Ingresa datos de salud (ej: Alergias, vacunas, etc.):");
+// Función para Salud: ingresar datos sobre la salud del bebé
+function goToSalud() {
+    let healthData = prompt("Ingresa los datos de salud del bebé (ej: tipo de leche, alergias, vacunas):");
     if (healthData) {
         alert("Datos de salud guardados: " + healthData);
     } else {
@@ -19,21 +20,35 @@ function goToHealth() {
     }
 }
 
-function goToLactation() {
-    let startTime = Date.now();
-    alert("Lactancia: Cronómetro iniciado.");
-    
-    // Temporizador para la lactancia
-    let timer = setInterval(function() {
-        let elapsedTime = (Date.now() - startTime) / 1000; // segundos
-        console.log("Tiempo: " + elapsedTime + " segundos");
-    }, 1000);
+// Función para Lactancia: cronómetro
+let lactanciaTimer;
+let lactanciaStartTime;
+let lactanciaElapsedTime = 0;
+
+function goToLactancia() {
+    let action = prompt("¿Iniciar o detener el cronómetro de lactancia? (escribe 'iniciar' o 'detener')");
+    if (action.toLowerCase() === 'iniciar') {
+        lactanciaStartTime = Date.now() - lactanciaElapsedTime;
+        lactanciaTimer = setInterval(function() {
+            lactanciaElapsedTime = Date.now() - lactanciaStartTime;
+            console.log("Lactancia en curso: " + (lactanciaElapsedTime / 1000).toFixed(2) + " segundos.");
+        }, 100);
+        alert("Cronómetro iniciado.");
+    } else if (action.toLowerCase() === 'detener') {
+        clearInterval(lactanciaTimer);
+        alert("Lactancia detenida. Duración: " + (lactanciaElapsedTime / 1000).toFixed(2) + " segundos.");
+        lactanciaElapsedTime = 0;
+    } else {
+        alert("Comando no reconocido.");
+    }
 }
 
-function goToGrowth() {
-    alert("Funcionalidad de Crecimiento: Puedes registrar el crecimiento del bebé.");
+// Función para Crecimiento: Mostrar datos de crecimiento (puedes personalizar)
+function goToCrecimiento() {
+    alert("Funcionalidad de Crecimiento: Aquí se mostrarían los datos de crecimiento del bebé.");
 }
 
+// Función para WhatsApp: enlazar con WhatsApp
 function goToWhatsApp() {
-    alert("Funcionalidad de WhatsApp: Puedes compartir información con el pediatra.");
+    window.open('https://wa.me/', '_blank');
 }
