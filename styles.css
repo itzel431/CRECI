@@ -13,6 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    flex-direction: column;
 }
 
 /* Pantallas */
@@ -62,44 +63,47 @@ body {
 .header-main {
     background-color: #ff7f9d;
     color: white;
-    padding: 30px 0;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
 .header-main h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .header-main p {
     font-size: 1.2rem;
-    margin-top: 0;
 }
 
-/* Apartados */
+/* Estilos para los apartados */
 .sections {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 30px;
     justify-items: center;
+    margin: 20px;
 }
 
 .section {
-    background-color: #ff5c8d;
+    background-color: #ff7f9d;
+    color: white;
+    padding: 30px;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .section:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    background-color: #ff4d7f;
 }
 
 .icon {
@@ -110,19 +114,33 @@ body {
     margin-bottom: 10px;
 }
 
-.section p {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
+/* Agregar iconos para cada sección usando imágenes o SVG */
+#diario .icon {
+    background-image: url('assets/diario-icon.svg');
+    background-size: cover;
 }
 
-/* Pantalla secundaria */
-.hidden {
-    display: none;
+#momentos .icon {
+    background-image: url('assets/momentos-icon.svg');
+    background-size: cover;
 }
 
-/* Estilo para los apartados */
-#diario, #momentos, #salud, #lactancia, #crecimiento, #whatsapp {
-    background-color: #ff8da1;
-    color: white;
+#salud .icon {
+    background-image: url('assets/salud-icon.svg');
+    background-size: cover;
+}
+
+#lactancia .icon {
+    background-image: url('assets/lactancia-icon.svg');
+    background-size: cover;
+}
+
+#crecimiento .icon {
+    background-image: url('assets/crecimiento-icon.svg');
+    background-size: cover;
+}
+
+#whatsapp .icon {
+    background-image: url('assets/whatsapp-icon.svg');
+    background-size: cover;
 }

@@ -1,30 +1,30 @@
-// Función para cambiar entre pantallas
+// Función para cambiar de pantalla
 function goToSecondScreen() {
-    document.getElementById("home-screen").style.display = "none";
-    document.getElementById("second-screen").style.display = "block";
+    document.getElementById("home-screen").classList.add("hidden");
+    document.getElementById("second-screen").classList.remove("hidden");
 }
 
 // Función para cada apartado
 function goToDiario() {
-    alert("Funcionalidad de Diario");
+    alert("Aquí puedes registrar el Diario del bebé.");
 }
 
 function goToMomentos() {
-    alert("Funcionalidad de Momentos");
+    alert("Aquí puedes agregar fotos y momentos especiales.");
 }
 
 function goToSalud() {
-    alert("Funcionalidad de Salud");
+    alert("Aquí puedes ingresar datos importantes sobre la salud del bebé.");
 }
 
 function goToLactancia() {
-    alert("Funcionalidad de Lactancia");
+    alert("Aquí puedes llevar un control de las sesiones de lactancia.");
 }
 
 function goToCrecimiento() {
-    alert("Funcionalidad de Crecimiento");
+    alert("Aquí puedes registrar el crecimiento del bebé.");
 }
 
-function goToWhatsapp() {
-    alert("Funcionalidad de WhatsApp");
+function goToWhatsApp() {
+    alert("Aquí puedes comunicarte con el pediatra o familiares.");
 }
