@@ -17,37 +17,39 @@
         </div>
     </div>
 
-    <!-- Pantalla Principal (Apartados) -->
+    <!-- Pantalla Principal -->
     <div id="second-screen" class="screen hidden">
-        <header>
+        <header class="header-main">
             <h1>Creci</h1>
             <p>Acompañándote en el arte de ser mamá</p>
         </header>
 
+        <!-- Apartados -->
         <div class="sections">
-            <div class="section" onclick="goToMomentos()">
-                <img src="assets/momentos.png" alt="Momentos" class="section-icon">
+            <div class="section" id="momentos" onclick="goToMomentos()">
+                <img src="assets/momentos-icon.png" alt="Momentos">
                 <p>Momentos</p>
             </div>
-            <div class="section" onclick="goToSalud()">
-                <img src="assets/salud.png" alt="Salud" class="section-icon">
+            <div class="section" id="salud" onclick="goToSalud()">
+                <img src="assets/salud-icon.png" alt="Salud">
                 <p>Salud</p>
             </div>
-            <div class="section" onclick="goToLactancia()">
-                <img src="assets/lactancia.png" alt="Lactancia" class="section-icon">
+            <div class="section" id="lactancia" onclick="goToLactancia()">
+                <img src="assets/lactancia-icon.png" alt="Lactancia">
                 <p>Lactancia</p>
             </div>
-            <div class="section" onclick="goToCrecimiento()">
-                <img src="assets/crecimiento.png" alt="Crecimiento" class="section-icon">
+            <div class="section" id="crecimiento" onclick="goToCrecimiento()">
+                <img src="assets/crecimiento-icon.png" alt="Crecimiento">
                 <p>Crecimiento</p>
             </div>
-            <div class="section" onclick="goToWhatsApp()">
-                <img src="assets/whatsapp.png" alt="WhatsApp" class="section-icon">
+            <div class="section" id="whatsapp" onclick="goToWhatsApp()">
+                <img src="assets/whatsapp-icon.png" alt="WhatsApp">
                 <p>WhatsApp</p>
             </div>
         </div>
     </div>
 
-    <script src="js.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+

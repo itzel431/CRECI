@@ -1,28 +1,33 @@
-/* Estilos generales */
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F9E5F2; /* Fondo suave */
-    color: #333;
-}
-
-.screen {
+    background-color: #f7f4f1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: absolute;
-    width: 100%;
-    transition: all 0.5s ease;
 }
 
-.hidden {
+/* Pantalla de inicio */
+.screen {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.screen.hidden {
     display: none;
 }
 
 .content {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -31,76 +36,75 @@ body {
 }
 
 .start-button {
-    padding: 15px 30px;
-    background-color: #E7A1D1; /* Color rosa suave */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #f67280;
+    color: white;
     border: none;
     border-radius: 5px;
-    color: white;
-    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .start-button:hover {
-    background-color: #D26F9B;
+    background-color: #f9a3b1;
 }
 
-/* Estilos de la pantalla principal */
-header {
+/* Pantalla principal */
+#second-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-main {
     text-align: center;
     margin-bottom: 40px;
 }
 
-header h1 {
+.header-main h1 {
     font-size: 36px;
-    color: #B24D81;
+    color: #333;
 }
 
-header p {
-    font-size: 20px;
-    color: #6F4B79;
-    font-weight: 300;
+.header-main p {
+    font-size: 18px;
+    color: #888;
 }
 
-/* Estilos para los apartados */
+/* Apartados */
 .sections {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .section {
+    background-color: #f7f4f1;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    width: 150px;
-    margin: 20px;
     cursor: pointer;
+    transition: transform 0.3s;
+    width: 120px;
 }
 
-.section img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.section:hover img {
+.section:hover {
     transform: scale(1.1);
 }
 
+.section img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
 .section p {
-    font-size: 16px;
-    color: #6F4B79;
+    font-size: 18px;
+    color: #333;
 }
-
-/* Efectos de transición */
-.screen {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.screen:not(.hidden) {
-    opacity: 1;
-    visibility: visible;
-}
-
