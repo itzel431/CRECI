@@ -1,110 +1,128 @@
-/* General styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f7f4f1;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7e3f2; /* Fondo cálido */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
-/* Pantalla de inicio */
+/* Pantallas */
 .screen {
     display: none;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.screen.hidden {
+.screen.active {
+    display: block;
+}
+
+/* Estilo para la pantalla de inicio */
+#home-screen {
+    display: block;
+}
+
+#second-screen {
     display: none;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 30px;
 }
 
 .logo {
     width: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .start-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #f67280;
+    background-color: #ff7f9d;
     color: white;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .start-button:hover {
-    background-color: #f9a3b1;
+    background-color: #ff4d7f;
 }
 
-/* Pantalla principal */
-#second-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
+/* Estilos para la pantalla principal */
 .header-main {
-    text-align: center;
-    margin-bottom: 40px;
+    background-color: #ff7f9d;
+    color: white;
+    padding: 30px 0;
 }
 
 .header-main h1 {
-    font-size: 36px;
-    color: #333;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .header-main p {
-    font-size: 18px;
-    color: #888;
+    font-size: 1.2rem;
+    margin-top: 0;
 }
 
 /* Apartados */
 .sections {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding: 30px;
+    justify-items: center;
 }
 
 .section {
-    background-color: #f7f4f1;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s;
+    background-color: #ff5c8d;
+    border-radius: 50%;
     width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.section img {
+.icon {
     width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
 .section p {
-    font-size: 18px;
-    color: #333;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Pantalla secundaria */
+.hidden {
+    display: none;
+}
+
+/* Estilo para los apartados */
+#diario, #momentos, #salud, #lactancia, #crecimiento, #whatsapp {
+    background-color: #ff8da1;
+    color: white;
 }
