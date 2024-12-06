@@ -4,8 +4,8 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 export default function PantallaInicial({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Creci</Text>
-      <Text style={styles.subtitle}>Acompañándote en el arte de ser mamá</Text>
+      <Text style={styles.title}>Bienvenido a Creci</Text>
+      <Text style={styles.subtitle}>Tu acompañante en el arte de ser mamá</Text>
       <Image source={require('../assets/icons/logocrechi.png')} style={styles.logo} />
       <TouchableOpacity
         style={styles.startButton}
@@ -23,9 +23,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFF7F0',
+    padding: 20,
   },
   title: {
-    fontSize: 36,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#FF6384',
     marginBottom: 10,
