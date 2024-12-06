@@ -10,8 +10,8 @@ export const GlobalStyles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#FF6384',
-    marginBottom: 20,
     textAlign: 'center',
+    marginBottom: 20,
   },
   input: {
     borderWidth: 1,

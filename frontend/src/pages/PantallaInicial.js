@@ -5,7 +5,7 @@ export default function PantallaInicial({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Creci</Text>
-      <Text style={styles.subtitle}>Tu acompañante en el arte de ser mamá</Text>
+      <Text style={styles.subtitle}>Acompañándote en el arte de ser mamá</Text>
       <Image source={require('../assets/icons/logocrechi.png')} style={styles.logo} />
       <TouchableOpacity
         style={styles.startButton}
@@ -22,13 +22,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFF7F0',
-    padding: 20,
+    backgroundColor: '#FFF7F0', // Fondo beige suave
   },
   title: {
     fontSize: 36,
     fontWeight: 'bold',
-    color: '#FF6384',
+    color: '#FF6384', // Rosa meloso
     marginBottom: 10,
   },
   subtitle: {
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   startButton: {
-    backgroundColor: '#FF6384',
+    backgroundColor: '#FF6384', // Botón rosa
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 25,
