@@ -4,9 +4,9 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 export default function PantallaInicial({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/icons/logocrechi.png')} style={styles.logo} />
       <Text style={styles.title}>Creci</Text>
       <Text style={styles.subtitle}>Tu acompañante en el arte de ser mamá</Text>
+      <Image source={require('../assets/icons/logocrechi.png')} style={styles.logo} />
       <TouchableOpacity
         style={styles.startButton}
         onPress={() => navigation.navigate('Principal')}
@@ -23,14 +23,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFF7F0',
-  },
-  logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 20,
+    padding: 20,
   },
   title: {
-    fontSize: 32,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#FF6384',
     marginBottom: 10,
@@ -41,14 +37,20 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     textAlign: 'center',
   },
+  logo: {
+    width: 150,
+    height: 150,
+    marginBottom: 30,
+  },
   startButton: {
     backgroundColor: '#FF6384',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 20,
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 25,
   },
   startText: {
-    color: '#fff',
+    color: '#FFF',
     fontSize: 18,
+    fontWeight: 'bold',
   },
 });
